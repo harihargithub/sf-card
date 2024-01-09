@@ -61,12 +61,12 @@ const Vertical = () => {
                                     </div>
                                     <div className="e-card-header">
                                         <div className="e-card-header-caption center">
-                                            <div className="e-card-header-title">Laura Callahan</div>
-                                            <div className="e-card-sub-title">Sales Coordinator</div>
+                                            <div className="e-card-header-title">Harihar Nagarajan</div>
+                                            <div className="e-card-sub-title">Direct - Abjaja Enterprises</div>
                                         </div>
                                     </div>
                                     <div className="e-card-separator"></div>
-                                    <div className="e-card-content">Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.</div>
+                                    <div className="e-card-content"> Harihar holds a prestigious distinction Certificate in Advance Full Stack Software Development Certificate from IIT-Roorkee</div>
                                     <div className="e-card-actions center">
                                         <button className="e-card-btn" title="E-mail">
                                             <span className="e-mail-icon cb-icons "></span>
