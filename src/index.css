@@ -899,7 +899,7 @@
     }
 
     .card-control-section.vertical_card_layout .e-card.profile .e-card-header-image {
-        background-image: url('images/nh%20photo%20300522.jpg');
+        background-image: url('/images/nh%20photo%20300522.jpg');
         width: 132px;
         height: 120px;
         background-size: cover;
