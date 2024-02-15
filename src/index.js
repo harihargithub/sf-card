@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import * as React from 'react';
 import { useEffect } from 'react';
+import './addlcss.css';
 
 
 const Vertical = () => {
@@ -68,27 +69,20 @@ const Vertical = () => {
                                 <div className="e-card-separator"></div>
                                 <div className="e-card-content"> Harihar holds a prestigious Certificate of Distinction in 'Advanced Full Stack Software Development' from IIT-Roorkee</div>
                                 <div className="e-card-actions center">
-                                    <button className="e-card-btn" title="E-mail">
-                                        <a href="mailto:nharihar1@gmail.com">
-                                            <span className="e-mail-icon cb-icons "></span>
-                                        </a>
-                                    </button>
-                                    <button className="e-card-btn" title="LinkedIn">
-                                        <a href="https://www.linkedin.com/in/harihar-nagarajan-452a6a1b/#">
-                                            <span className="e-linkedin-icon cb-icons "></span>
-                                        </a>
-                                    </button>
-                                    <button className="e-card-btn" title="Facebook">
-                                        <a href="https://www.facebook.com/abjajaenterprises">
-                                            <span className="e-fb-icon cb-icons "></span>
-                                        </a>
-                                    </button>
-                                    <button className="e-card-btn" title="Twitter">
-                                        <a href="https://twitter.com/nharihar1">
-                                            <span className="e-tweet-icon cb-icons "></span>
-                                        </a>
-                                    </button>
+                                    <a href="mailto:nharihar1@gmail.com" className="e-card-btn" title="E-mail">
+                                        <span className="e-mail-icon cb-icons"></span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/harihar-nagarajan-452a6a1b/#" className="e-card-btn" title="LinkedIn">
+                                        <span className="e-google-icon cb-icons"></span>
+                                    </a>
+                                    <a href="https://www.facebook.com/abjajaenterprises" className="e-card-btn" title="Facebook">
+                                        <span className="e-fb-icon cb-icons"></span>
+                                    </a>
+                                    <a href="https://twitter.com/nharihar1" className="e-card-btn" title="Twitter">
+                                        <span className="e-tweet-icon cb-icons"></span>
+                                    </a>
                                 </div>
+
 
                             </div>
                         </div>

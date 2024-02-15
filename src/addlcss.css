@@ -1,0 +1,5 @@
+/* Target the container of social media buttons */
+.card-control-section.vertical_card_layout .e-card.profile .e-card-actions {
+    /* Set the background to transparent or any other desired style */
+    background-color: transparent;
+}
