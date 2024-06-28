@@ -103,3 +103,61 @@ Replaced Button with Anchor Tags as follows and it worked, pfa the screenshot an
 
                                 </div>
 
+
+
+280624
+To run this React stackblitz project on vs Coe , follow these steps:
+
+stackblitz sf-card cloned @ vs code and to run process flow:(base) PS C:\Users\nhari\OneDrive\workspace-spring-tool-suite-4-4.19.0.RELEASE\ems_springboot_react_vite_mysql_sf\stackblitz nh sf card\sf-card> npm init -y
+then npm install react react-dom   then npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-loader  (Babel to transpile JSX and ES6 code to ES5) then npm install --save-dev webpack webpack-cli webpack-dev-server style-loader css-loader  (undle JavaScript files for use in a browser:)then npm install react-dom@next (react-dom client package)
+then Create a .babelrc file in your project root with the following content:   (ref notes.txt from 280624)
+{
+    "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+
+then Create a webpack.config.js file in your project root with the following content: (ref notes.txt from 280624)
+const path = require('path');
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                },
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        compress: true,
+        port: 9000,
+    },
+};
+
+Then npm start
+
+
+Based on the shared code snippets, here's a breakdown of how these files work together in a React application:
+
+nhcard.js: This file defines a React component named HariharNagarajanCard which represents a card layout for a person named Harihar Nagarajan. It also exports a function openCardInNewTab that renders this component to a string using renderToString from react-dom/server and opens it in a new browser tab.
+
+index.js: This is the entry point of the React application. It imports the openCardInNewTab function from nhcard.js. The App component defined here renders a button that, when clicked, calls openCardInNewTab to open the Harihar Nagarajan card in a new tab. The App component is then rendered into a DOM element with the ID sample using React 18's createRoot API.
+
+HTML file: This is the HTML template for the application. It includes links to external stylesheets and defines a div with the ID sample, which is the mount point for the React application defined in index.js. The body of the document applies the material3 class, suggesting the use of Material Design 3 CSS for styling.
+
+Together, these files create a simple React application that displays a button. When the button is clicked, a new browser tab opens, displaying a card with information about Harihar Nagarajan. The application uses external styles from Syncfusion and Bootstrap for styling, and it's set up to be responsive and compatible with modern web standards.
+
+
